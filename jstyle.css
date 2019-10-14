@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker&display=swap');
+
 body
 {
   background-color: #ffffcc; 
+  font-family: 'Amatic SC', cursive;
 }
 
 h1 
@@ -9,7 +12,6 @@ h1
   color: #000000;
   background-color: #ffffcc; 
   font-size: 80px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 h2
@@ -18,7 +20,6 @@ h2
   color: #000000;
   background-color: #ffffcc;
   font-size: 50px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 div.menu
