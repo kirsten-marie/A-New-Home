@@ -27,17 +27,47 @@
 		<ul class="navbar-nav mr-auto ">
 			<li class="nav-item active">
 				<a class="nav-link" href="#">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Dogs</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Cats</a>
-            </li>		
-            <li class="nav-item">
-				<a class="nav-link" href="#">Other</a>
-			</li>		
-		</ul>
+      </li>
+      
+    <!-- Dogs Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Dogs
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" id="pits" href="#">Pits</a>
+        <a class="dropdown-item" href="#">Labs</a>
+        <a class="dropdown-item" href="#">German Shepard</a>
+        <a class="dropdown-item" href="#">Large Dogs</a>
+        <a class="dropdown-item" href="#">Small Dogs</a>
+      </div>
+    </li>
+    <!-- Cats Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Cats
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#" id="cats_long">Long-Haired</a>
+        <a class="dropdown-item" href="#" id="cats_short">Short-Haired</a>
+      </div>
+    </li>
+    <!-- Other Animals Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Other
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#" id="Furry">Small & Furry</a>
+        <a class="dropdown-item" href="#" id="birds">Birds</a>
+        <a class="dropdown-item" href="#" id="horses">Horses & Barnyard</a>
+        <a class="dropdown-item" href="#" id="reptiles">Scales, Fins, & Other</a>
+      </div>
+    </li>	
+    </ul>
+    <span class="navbar-text"> 
+      <img class="pull-right clearfix" src="img/Motto2.png" id="motto">
+     </span>
 	</div>
 </div>
 </nav>
