@@ -4,6 +4,7 @@ body
 {
   background-color: #ffffcc; 
   font-family: 'Amatic SC', cursive;
+  font-size: 30px;
 }
 
 h1 
@@ -22,9 +23,20 @@ h2
   font-size: 50px;
 }
 
-div.menu
+h4 
+{ 
+  text-align: center;
+  color: #000000;
+  background-color: #ffffcc; 
+  font-size: 40px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+
+.menuStyle
 {
   background-color: #d9ffcc;
+  font-size: 60px;
 }
 
 div.elders 
@@ -34,9 +46,13 @@ div.elders
   
 }
 
-div.petmodal
+.petCard
 {
-
+  font-size: 30px;
 }
 
-</style>
+.petImage
+{
+  max-height: 400px;
+}
+
