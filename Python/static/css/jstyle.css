@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker&display=swap');
+
+body
+{
+  background-color: #ffffcc; 
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+}
+
+h1 
+{ 
+  text-align: center;
+  color: #000000;
+  background-color: #ffffcc; 
+  font-size: 80px;
+}
+
+h2
+{
+  text-align: left;
+  color: #000000;
+  background-color: #ffffcc;
+  font-size: 50px;
+}
+
+h4 
+{ 
+  text-align: center;
+  color: #000000;
+  background-color: #ffffcc; 
+  font-size: 40px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+
+.menuStyle
+{
+  background-color: #d9ffcc;
+  font-size: 60px;
+}
+
+div.elders 
+{
+  overflow: auto;
+  background-color: #ffffff;
+  
+}
+
+.petCard
+{
+  font-size: 30px;
+}
+
+.petImage
+{
+  max-height: 400px;
+}
