@@ -17,6 +17,7 @@ def index():
 @app.route('/cardtemplate')
 def cardTemplate():
     cat = {'type:': 'cat'}
+    #Hard coded data to test
     cats = [
         {
             'shelterLogo':'static/img/YWACLogo.jpg',
