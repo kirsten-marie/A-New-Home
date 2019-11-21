@@ -14,7 +14,7 @@ def index():
 ##def dogs():
     return render_template('dogs.html')
 
-##@app.route('/card')
+@app.route('/cardtemplate')
 def cardTemplate():
     cat = {'type:': 'cat'}
     cats = [
@@ -38,5 +38,5 @@ def cardTemplate():
             'description': 'I am a small grey and white adult cat with short hair. I have been spayed. I want to find my new home.',
             'url': 'https://www.petfinder.com/cat/sarah-46288612/tn/knoxville/humane-society-of-the-tennessee-valley-tn178/'
         }
-    return render_template('cardtemplate.html')
-    #return render_template('cardtemplate.html', animal=cat, animals=cats)
+    ]
+    return render_template('cardtemplate.html', animal=cat, animals=cats)
