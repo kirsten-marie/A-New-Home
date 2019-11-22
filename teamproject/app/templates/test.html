@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!--Section: Main info-->
+    <div class="container wow fadeIn">
+            <h1 style="font-family: 'Permanent Marker', cursive;">Knoxville's</h1><h1>{{ type.type }}</h1>
+    </div>
+
+    <!-- Card deck -->
+    <div class="card-deck row" style="padding: 20px;"> 
+
+        <!-- Card 1-->      
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-11 col-sm-offset 1">
+            <div class="card-container manual-flip">
+            <div class="card mb-4">
+                <div class="front">
+                    <div class="cover">
+                        <img class="cover" src="static/img/YWACLogo.jpg"/>
+                    </div>
+                    <div class="pet">
+                        <img class="img-circle" src="static/img/cat1.png"/>
+                    </div>
+                    <div class="content">
+                        <div class="main" id="cat1">
+                            <h3 class="name">Ramen</h3>
+                            <p class="age">Age: 7M</p> 
+                        </div>
+                      </div>
+                        <div class="footer">
+                            <button class="btn btn-simple" onclick="rotateCard(this)">
+                                Learn More <i class="far fa-share-square"></i> 
+                             </button>
+                        </div>
+                </div> <!-- end front panel -->
+                <div class="back">
+                    <div class="cover">
+                        <img class="cover" src="static/img/YWACLogo.jpg"/>
+                    </div>
+                    <div class="pet2">
+                        <img class="img-circle" src="static/img/cat1.png"/>
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <div class="stats-container">
+                                <div class="stats">
+                                    <h4>Male</h4>
+                                </div>
+                                <div class="stats">
+                                    <h4>3.2 LB </h4>
+                                </div>
+                              </div>
+                              <div class ="description">"I'm a little shy and will need some time to warm up, but I would still love a home."</div>
+                              <div class ="text-center">
+                                <button type="button" id="cat1" class="btn btn-white btn-md text-lg-center" style="font-size:18px; padding: .7rem 1rem;"
+                                    onclick="openInNewTab('https://www.young-williams.org/adopt-a-pet/adopt-a-cat/#sl_embed&page=shelterluv_wrap_1527306539435%2Fpublish_animal%2FYWAC-A-165809%3Fspecies%3DCat%26intakeType%3D%26status%3D');">Adopt Me</button>
+                                <button type="button" id="ywac" class="btn btn-white btn-md" style="font-size:18px; padding: .7rem 1rem;" a href="#">View Map</button>
+                              </div>
+                              
+                        </div>
+                    </div>
+                    <div class="footer" style="border:none;">
+                        <button class="btn btn-simple btn-back" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                            <i class="fas fa-undo-alt"></i>
+                        </button>
+                    </div>
+                </div> <!-- end back panel -->
+            </div> <!-- end card -->
+        </div> <!-- end card-container -->
+      </div>
+
+        <!-- Card 2-->  
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-11 col-sm-offset 1">
+            <div class="card-container manual-flip">
+            <div class="card mb-4">
+                <div class="front">
+                    <div class="cover">
+                        <img class="cover" src="static/img/YWACLogo.jpg"/>
+                    </div>
+                    <div class="pet">
+                        <img class="img-circle" src="static/img/cat3.jpg"/>
+                    </div>
+                    <div class="content">
+                        <div class="main" id="cat1">
+                            <h3 class="name">Jaguar</h3>
+                            <p class="age">Age: 5M</p> 
+                        </div>
+                      </div>
+                        <div class="footer">
+                            <button class="btn btn-simple" onclick="rotateCard(this)">
+                                Learn More <i class="far fa-share-square"></i> 
+                             </button>
+                        </div>
+                </div> <!-- end front panel -->
+                <div class="back">
+                    <div class="cover">
+                        <img class="cover" src="static/img/YWACLogo.jpg"/>
+                    </div>
+                    <div class="pet2">
+                        <img class="img-circle" src="static/img/cat3.jpg"/>
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <div class="stats-container">
+                                <div class="stats">
+                                    <h4>Female</h4>
+                                </div>
+                                <div class="stats">
+                                    <h4>5 LB </h4>
+                                </div>
+                              </div>
+                              <div class ="description">"I'm a tabby cat with short hair."</div>
+                              <div class ="text-center">
+                                <button type="button" id="cat2" class="btn btn-white btn-md text-lg-center" style="font-size:18px; padding: .7rem 1rem;"
+                                    onclick="openInNewTab('https://www.young-williams.org/adopt-a-pet/adopt-a-dog/#sl_embed&page=shelterluv_wrap_1527306269046%2Fpublish_animal%2FYWAC-A-167311%3Fspecies%3DDog%26intakeType%3D%26status%3D');">Adopt Me</button>
+                                <button type="button" id="ywac" class="btn btn-white btn-md" style="font-size:18px; padding: .7rem 1rem;" a href="#">View Map</button>
+                              </div>
+                              
+                        </div>
+                    </div>
+                    <div class="footer" style="border:none;">
+                        <button class="btn btn-simple btn-back" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                            <i class="fas fa-undo-alt"></i>
+                        </button>
+                    </div>
+                </div> <!-- end back panel -->
+            </div> <!-- end card -->
+        </div> <!-- end card-container -->
+        </div> <!-- end card 2-->
+{% endblock %}
+      
