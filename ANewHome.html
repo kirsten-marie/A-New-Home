@@ -1,114 +1,501 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-<title>A New Home</title>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">   -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-<style>
-
-body
-{
-  background-color: #ffffcc; 
-}
-
-h1 
-{ 
-  text-align: center;
-  color: #000000;
-  background-color: #ffffcc; 
-  font-size: 80px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-}
-
-h2
-{
-  text-align: left;
-  color: #000000;
-  background-color: #ffffcc;
-  font-size: 50px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-}
-
-div.menu
-{
-  background-color: #d9ffcc;
-}
-
-div.elders 
-{
-  overflow: auto;
-  background-color: #ffffff;
-  
-}
-
-div.petmodal
-{
-
-}
-
-</style>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>A New Home- Adoptable Animals</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="jstyle.css" rel="stylesheet">
 </head>
-
 <body>
 
-<h1> 
-<i class= "glyphicon glyphicon-home" style= "font-size:100px; color:red; text-shadow:2px 2px 4px #000000;"></i> 
-"Every he<i class= "glyphicon glyphicon-heart" style="font-size:45px; color:red; text-shadow:2px 2px 4px #000000;"></i>rt needs a h<i class= "glyphicon glyphicon-heart" style="font-size:45px; color:red; text-shadow:2px 2px 4px #000000;"></i>me."
-</h1>
-
-
-<div class="menu">
-  <ul class="nav nav-tabs nav-justified">
-    <li class="active"><a href="#">Home</a></li>
-    <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dogs <span class="caret"></span></a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Pits</a></li>
-        <li><a href="#">Labs</a></li>
-        <li><a href="#">German Shepard</a></li>
-        <li><a href="#">Muts</a></li>
-        <li><a href="#">Large Dogs</a></li>
-        <li><a href="#">Small Dogs</a></li>
-      </ul>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light menuStyle">
+	<a class="navbar-brand" href="#"><img src ="img/logo4.png" alt="A New Home" height="200"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active" style="padding:20px">
+				<a class="nav-link" href="home.html">Home</a>
+      </li>
+      
+    <!-- Dogs Dropdown -->
+    <li class="nav-item dropdown" style="padding:20px">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Dogs
+      </a>
+      <div class="dropdown-menu menuItems">
+	    <a class="dropdown-item" id ="allDogs" href="dogd.html">All</a>
+        <a class="dropdown-item" id="pits" href="dogs.html">Pits</a>
+        <a class="dropdown-item" id="labs" href="dogs.html">Labs</a>
+        <a class="dropdown-item" id="germanShepard" href="dogs.html">German Shepard</a>
+        <a class="dropdown-item" id="largeD" href="dogs.html">Large Dogs</a>
+        <a class="dropdown-item" id="smallD" href="dogs.html">Small Dogs</a>
+      </div>
     </li>
-    <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cats <span class="caret"></span></a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Long Hair</a></li>
-        <li><a href="#">Short Hair</a></li>
-      </ul>
+    <!-- Cats Dropdown -->
+    <li class="nav-item dropdown" style="padding:20px">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Cats
+      </a>
+      <div class="dropdown-menu menuItems">
+	    <a class="dropdown-item" href="cats.html" id="allCats">All</a>
+        <a class="dropdown-item" href="cats.html" id="cats_long">Long-Haired</a>
+        <a class="dropdown-item" href="cats.html" id="cats_short">Short-Haired</a>
+      </div>
     </li>
-    <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Other <span class="caret"></span></a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Small & Furry</a></li>
-        <li><a href="#">Birds</a></li>
-        <li><a href="#">Horses</a></li>
-        <li><a href="#">Barnyard</a></li>
-        <li><a href="#">Scales, Fins, & Other</a></li>
-      </ul>
-    </li>
-  </ul>
+    <!-- Other Animals Dropdown -->
+    <li class="nav-item dropdown" style="padding:20px">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Other
+      </a>
+      <div class="dropdown-menu">
+	    <a class="dropdown-item" herf="#" id="allOther">All</a>
+        <a class="dropdown-item" href="#" id="Furry">Small & Furry</a>
+        <a class="dropdown-item" href="#" id="birds">Birds</a>
+        <a class="dropdown-item" href="#" id="horses">Horses & Barnyard</a>
+        <a class="dropdown-item" href="#" id="reptiles">Scales, Fins, & Other</a>
+      </div>
+    </li>	
+    </ul>
+    <span class="navbar-text"> 
+      <img class="clearfix" src="img/Motto2.png" style="width:400px" id="motto">
+     </span>
+</div>
+</nav>
+<!--Section: Main info-->
+<div class="container wow fadeIn">
+        <h1 style="font-family: 'Permanent Marker', cursive;">Knoxville's</h1><h1>Elders</h1>
 </div>
 
-<h2> Knoxville's Elders </h2>
+<!-- Card deck 1 -->
+<div class="card-deck" style="padding: 20px;">
 
+    <!-- Card 1-->
+    <div class="card mb-4">
+  
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top petImage" src="img/cat1.png" alt="Card image cap-dog">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+  
+      <!--Card content-->
+      <div class="card-body">
+  
+        <!--Title-->
+        <h4 class="card-title">Ramen</h4>
+        <!--Text-->
+        <p class="card-text" style="font-size:large">
+          <b>Age: </b>5M<br>
+          <b>Sex: </b>Male<br>
+          <b>Weight: </b>3 lb<br>
+          <b>Description: </b>Shy, will need time to warm up</p>
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <center>
+          <button type="button" class="btn btn-info btn-light-blue btn-md text-lg-center" style="font-size:16px" href="https://www.young-williams.org/adopt-a-pet/adopt-a-cat/#sl_embed&page=shelterluv_wrap_1527306539435%2Fpublish_animal%2FYWAC-A-165809%3Fspecies%3DCat%26intakeType%3D%26status%3D">Adopt Me</button>
+          <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+        </center>
+      </div>
+  
+    </div>
+    <!-- Card -->
 
-<div class= "elders">
-<p1>
-<!-- add cards here -->
-</p1>
+        <!-- Card -->
+  
+    <!-- Card 2-->
+    <div class="card mb-4">
+  
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top petImage" src="img/cat3.jpg" alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+  
+      <!--Card content-->
+      <div class="card-body">
+  
+        <!--Title-->
+        <h4 class="card-title">Jaguar</h4>
+        <!--Text-->
+        <p class="card-text" style="font-size: large;">
+            <b>Age: </b>5M<br>
+            <b>Sex: </b>Female<br>
+            <b>Weight: </b>5 lb<br>
+            <b>Description: </b>Tabby cat, short haired.</p>
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+       <center>
+        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.young-williams.org/adopt-a-pet/adopt-a-dog/#sl_embed&page=shelterluv_wrap_1527306269046%2Fpublish_animal%2FYWAC-A-167311%3Fspecies%3DDog%26intakeType%3D%26status%3D">Adopt Me</button>
+        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+      </center>
+      </div>
+  
+    </div>
+    <!-- Card -->
+  
+    <!-- Card 3-->
+    <div class="card mb-4">
+  
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top petImage" src="img/cat2.png" alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+  
+      <!--Card content-->
+      <div class="card-body">
+  
+        <!--Title-->
+        <h4 class="card-title">Spice</h4>
+        <!--Text-->
+        <p class="card-text" style="font-size: large;">
+            <b>Age: </b>4Y<br>
+            <b>Sex: </b>Female<br>
+            <b>Weight: </b>7 lb<br>
+            <b>Description: </b>Short-haired. Has not been around a lot of people. </p>
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+       <center>
+        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.young-williams.org/adopt-a-pet/adopt-a-cat/#sl_embed&page=shelterluv_wrap_1527306539435%2Fpublish_animal%2FYWAC-A-166319%3Fspecies%3DCat%26intakeType%3D%26status%3D">Adopt Me</button>
+        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+      </center>
+      </div>
+  
+    </div>
+  
+  </div>
+  <!-- Card deck -->
+
+ <!-- Card deck 1 -->
+<div class="card-deck" style="padding: 20px;">
+
+  <!-- Card 1-->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top petImage" src="img/cat1.png" alt="Card image cap-dog">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">Ramen</h4>
+      <!--Text-->
+      <p class="card-text" style="font-size:large">
+        <b>Age: </b>5M<br>
+        <b>Sex: </b>Male<br>
+        <b>Weight: </b>3 lb<br>
+        <b>Description: </b>Shy, will need time to warm up</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      <center>
+        <button type="button" class="btn btn-info btn-light-blue btn-md text-lg-center" style="font-size:16px" href="https://www.young-williams.org/adopt-a-pet/adopt-a-cat/#sl_embed&page=shelterluv_wrap_1527306539435%2Fpublish_animal%2FYWAC-A-165809%3Fspecies%3DCat%26intakeType%3D%26status%3D">Adopt Me</button>
+        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+      </center>
+    </div>
+
+  </div>
+  <!-- Card -->
+
+      <!-- Card -->
+
+  <!-- Card 2-->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top petImage" src="img/cat3.jpg" alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">Jaguar</h4>
+      <!--Text-->
+      <p class="card-text" style="font-size: large;">
+          <b>Age: </b>5M<br>
+          <b>Sex: </b>Female<br>
+          <b>Weight: </b>5 lb<br>
+          <b>Description: </b>Tabby cat, short haired.</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+     <center>
+      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.young-williams.org/adopt-a-pet/adopt-a-dog/#sl_embed&page=shelterluv_wrap_1527306269046%2Fpublish_animal%2FYWAC-A-167311%3Fspecies%3DDog%26intakeType%3D%26status%3D">Adopt Me</button>
+      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+    </center>
+    </div>
+
+  </div>
+  <!-- Card -->
+
+  <!-- Card 3-->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top petImage" src="img/cat2.png" alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">Spice</h4>
+      <!--Text-->
+      <p class="card-text" style="font-size: large;">
+          <b>Age: </b>4Y<br>
+          <b>Sex: </b>Female<br>
+          <b>Weight: </b>7 lb<br>
+          <b>Description: </b>Short-haired. Has not been around a lot of people. </p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+     <center>
+      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.young-williams.org/adopt-a-pet/adopt-a-cat/#sl_embed&page=shelterluv_wrap_1527306539435%2Fpublish_animal%2FYWAC-A-166319%3Fspecies%3DCat%26intakeType%3D%26status%3D">Adopt Me</button>
+      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+    </center>
+    </div>
+
+  </div>
 
 </div>
-<br>
+<!-- Card deck -->
 
+  <!-- Card deck -->
+<div class="card-deck" style="padding: 20px;">
+
+    <!-- Card 1-->
+    <div class="card mb-4">
+  
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top petImage" src="img/dog1.png" alt="Card image cap-dog">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+  
+      <!--Card content-->
+      <div class="card-body">
+  
+        <!--Title-->
+        <h4 class="card-title">Bella</h4>
+        <!--Text-->
+        <p class="card-text" style="font-size:large">
+          <b>Age: </b>6Y<br>
+          <b>Sex: </b>Female<br>
+          <b>Weight: </b>40 lb<br>
+          <b>Description: </b>Shy, will need time to warm up</p>
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <center>
+          <button type="button" class="btn btn-info btn-light-blue btn-md text-lg-center" style="font-size:16px" a href="https://www.shelterluv.com/publish_animal/YWAC-A-166586?embedded=1&columns=2&iframeId=shelterluv_wrap_1527306269046&species=Dog&intakeType=&status=#https://www.young-williams.org/adopt-a-pet/adopt-a-dog/">View Shelter Link</button>
+          <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+        </center>
+      </div>
+  
+    </div>
+    <!-- Card -->
+  
+    <!-- Card 2-->
+    <div class="card mb-4">
+  
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top petImage" src="img/dog2.jpg" alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+  
+      <!--Card content-->
+      <div class="card-body">
+  
+        <!--Title-->
+        <h4 class="card-title">Peter</h4>
+        <!--Text-->
+        <p class="card-text" style="font-size: large;">
+            <b>Age: </b>2Y<br>
+            <b>Sex: </b>Male<br>
+            <b>Weight: </b>115 lb<br>
+            <b>Description: </b>Anatolian/Shepherd mix, would do good in a home with kids but with no cats.</p>
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+       <center>
+        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.petfinder.com/dog/peter-42667777/tn/knoxville/tennessee-valley-golden-retriever-rescue-tn103/">View Shelter Link</button>
+        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+      </center>
+      </div>
+  
+    </div>
+    <!-- Card -->
+  
+    <!-- Card 3-->
+    <div class="card mb-4">
+  
+      <!--Card image-->
+      <div class="view overlay">
+        <img class="card-img-top petImage" src="img/dog3.png" alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+  
+      <!--Card content-->
+      <div class="card-body">
+  
+        <!--Title-->
+        <h4 class="card-title">Clayton</h4>
+        <!--Text-->
+        <p class="card-text" style="font-size: large;">
+            <b>Age: </b>5Y<br>
+            <b>Sex: </b>Male<br>
+            <b>Weight: </b>54 lb<br>
+            <b>Description: </b>Hound mix, needs a home without cats.</p>
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+       <center>
+        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.young-williams.org/adopt-a-pet/adopt-a-dog/#sl_embed&page=shelterluv_wrap_1527306269046%2Fpublish_animal%2FYWAC-A-167311%3Fspecies%3DDog%26intakeType%3D%26status%3D">View Shelter Link</button>
+        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+      </center>
+      </div>
+  
+    </div>
+    <!-- Card -->
+  
+  </div>
+  <!-- Card deck -->
+
+   <!-- Card deck -->
+<div class="card-deck" style="padding: 20px;">
+
+  <!-- Card 1-->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top petImage" src="img/dog1.png" alt="Card image cap-dog">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">Bella</h4>
+      <!--Text-->
+      <p class="card-text" style="font-size:large">
+        <b>Age: </b>6Y<br>
+        <b>Sex: </b>Female<br>
+        <b>Weight: </b>40 lb<br>
+        <b>Description: </b>Shy, will need time to warm up</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      <center>
+        <button type="button" class="btn btn-info btn-light-blue btn-md text-lg-center" style="font-size:16px" a href="https://www.shelterluv.com/publish_animal/YWAC-A-166586?embedded=1&columns=2&iframeId=shelterluv_wrap_1527306269046&species=Dog&intakeType=&status=#https://www.young-williams.org/adopt-a-pet/adopt-a-dog/">View Shelter Link</button>
+        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+      </center>
+    </div>
+
+  </div>
+  <!-- Card -->
+
+  <!-- Card 2-->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top petImage" src="img/dog2.jpg" alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">Peter</h4>
+      <!--Text-->
+      <p class="card-text" style="font-size: large;">
+          <b>Age: </b>2Y<br>
+          <b>Sex: </b>Male<br>
+          <b>Weight: </b>115 lb<br>
+          <b>Description: </b>Anatolian/Shepherd mix, would do good in a home with kids but with no cats.</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+     <center>
+      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.petfinder.com/dog/peter-42667777/tn/knoxville/tennessee-valley-golden-retriever-rescue-tn103/">View Shelter Link</button>
+      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+    </center>
+    </div>
+
+  </div>
+  <!-- Card -->
+
+  <!-- Card 3-->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top petImage" src="img/dog3.png" alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">Clayton</h4>
+      <!--Text-->
+      <p class="card-text" style="font-size: large;">
+          <b>Age: </b>5Y<br>
+          <b>Sex: </b>Male<br>
+          <b>Weight: </b>54 lb<br>
+          <b>Description: </b>Hound mix, needs a home without cats.</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+     <center>
+      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.young-williams.org/adopt-a-pet/adopt-a-dog/#sl_embed&page=shelterluv_wrap_1527306269046%2Fpublish_animal%2FYWAC-A-167311%3Fspecies%3DDog%26intakeType%3D%26status%3D">View Shelter Link</button>
+      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
+    </center>
+    </div>
+
+  </div>
+  <!-- Card -->
+
+</div>
+<!-- Card deck -->
+
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
+</html>
