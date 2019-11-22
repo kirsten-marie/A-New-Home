@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light menuStyle">
+        <a class="navbar-brand" href="#"><img src ="img/logo4.png" alt="A New Home" height="200"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active" style="padding:20px">
+                    <a class="nav-link" href="home.html">Home</a>
+          </li>
+          
+        <!-- Dogs Dropdown -->
+        <li class="nav-item dropdown" style="padding:20px">
+          <a class="nav-link dropdown-toggle" href="#dogs.html" id="navbardrop" data-toggle="dropdown">
+            Dogs
+          </a>
+          <div class="dropdown-menu menuItems">
+            <a class="dropdown-item" id="pits" href="dogs.html">Pits</a>
+            <a class="dropdown-item" href="dogs.html">Labs</a>
+            <a class="dropdown-item" href="dogs.html">German Shepard</a>
+            <a class="dropdown-item" href="dogs.html">Large Dogs</a>
+            <a class="dropdown-item" href="dogs.html">Small Dogs</a>
+          </div>
+        </li>
+        <!-- Cats Dropdown -->
+        <li class="nav-item dropdown" style="padding:20px">
+          <a class="nav-link dropdown-toggle" href="#cats.html" id="navbardrop" data-toggle="dropdown">
+            Cats
+          </a>
+          <div class="dropdown-menu menuItems">
+            <a class="dropdown-item" href="cats.html" id="cats_long">Long-Haired</a>
+            <a class="dropdown-item" href="cats.html" id="cats_short">Short-Haired</a>
+          </div>
+        </li>
+        <!-- Other Animals Dropdown -->
+        <li class="nav-item dropdown" style="padding:20px">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Other
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#" id="Furry">Small & Furry</a>
+            <a class="dropdown-item" href="#" id="birds">Birds</a>
+            <a class="dropdown-item" href="#" id="horses">Horses & Barnyard</a>
+            <a class="dropdown-item" href="#" id="reptiles">Scales, Fins, & Other</a>
+          </div>
+        </li>	
+        </ul>
+        <span class="navbar-text"> 
+          <img id = "motto" src="img/Motto2.png" style="width:400px" id="motto">
+         </span>
+    </div>
+    </nav>
+    {% endblock %}
+    {% block content %}{% endblock %}

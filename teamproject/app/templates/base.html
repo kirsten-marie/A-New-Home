@@ -12,7 +12,7 @@
         <!-- Material Design Bootstrap -->
         <link href="/static/css/mdb.min.css" rel="stylesheet">
         <!-- Custom styles -->
-        <link href="/static/css/jstyle.css" rel="stylesheet">
+        <link href="/static/jstyle.css" rel="stylesheet">
         <link href="/static/css/pe-icon-7-stroke.css" rel="stylesheet" />
         <link href='/static/css/rotating-card.css' rel='stylesheet' />
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
@@ -25,84 +25,7 @@
 </head>
 
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light menuStyle">
-        <a class="navbar-brand" href="#"><img src ="static/img/logo4.png" alt="A New Home" height="200"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active" style="padding:20px">
-                    <a class="nav-link" href="home.html">Home</a>
-          </li>
-          
-        <!-- Dogs Dropdown -->
-        <li class="nav-item dropdown" style="padding:20px">
-          <a class="nav-link dropdown-toggle" href="#dogs.html" id="navbardrop" data-toggle="dropdown">
-            Dogs
-          </a>
-          <div class="dropdown-menu menuItems">
-            <a class="dropdown-item" id="pits" href="dogs.html">Pits</a>
-            <a class="dropdown-item" href="dogs.html">Labs</a>
-            <a class="dropdown-item" href="dogs.html">German Shepard</a>
-            <a class="dropdown-item" href="dogs.html">Large Dogs</a>
-            <a class="dropdown-item" href="dogs.html">Small Dogs</a>
-          </div>
-        </li>
-        <!-- Cats Dropdown -->
-        <li class="nav-item dropdown" style="padding:20px">
-          <a class="nav-link dropdown-toggle" href="#cats.html" id="navbardrop" data-toggle="dropdown">
-            Cats
-          </a>
-          <div class="dropdown-menu menuItems">
-            <a class="dropdown-item" href="cats.html" id="cats_long">Medium-Haired</a>
-            <a class="dropdown-item" href="cats.html" id="cats_short">Short-Haired</a>
-          </div>
-        </li>
-        <!-- Other Animals Dropdown -->
-        <li class="nav-item dropdown" style="padding:20px">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            Other
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#" id="Furry">Small & Furry</a>
-            <a class="dropdown-item" href="#" id="birds">Birds</a>
-            <a class="dropdown-item" href="#" id="horses">Horses & Barnyard</a>
-            <a class="dropdown-item" href="#" id="reptiles">Scales, Fins, & Other</a>
-          </div>
-        </li>	
-        </ul>
-        <span class="navbar-text"> 
-          <img id = "motto" src="static/img/Motto2.png" style="width:400px" id="motto">
-         </span>
-    </div>
-    </nav>
-    {% block content %}{% endblock %}
-	<script type="text/javascript">
-          $().ready(function(){
-              $('[rel="tooltip"]').tooltip();
-      
-              $('a.scroll-down').click(function(e){
-                  e.preventDefault();
-                  scroll_target = $(this).data('href');
-                   $('html, body').animate({
-                       scrollTop: $(scroll_target).offset().top - 60
-                   }, 1000);
-              });
-      
-          });
-      
-          function rotateCard(btn){
-              var $card = $(btn).closest('.card-container');
-              console.log($card);
-              if($card.hasClass('hover')){
-                  $card.removeClass('hover');
-              } else {
-                  $card.addClass('hover');
-              }
-          }
-          </script>
+  {% block navbar %}{% endblock %}
     <!-- JQuery -->
     <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -111,5 +34,6 @@
     <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="/static/js/mdb.min.js"></script>
-    </body>
+   
+</body>
 </html>

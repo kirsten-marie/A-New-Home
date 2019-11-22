@@ -4,15 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>A New Home- Adoptable Animals</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Custom styles -->
-    <link href="jstyle.css" rel="stylesheet">
+    <title>Rotating Cards</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="css/mdb.min.css" rel="stylesheet">
+        <!-- Custom styles -->
+        <link href="css/jstyle.css" rel="stylesheet">
+        <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
+        <link href='css/rotating-card.css' rel='stylesheet' />
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <script>
+          function openInNewTab(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+          }
+        </script>
 </head>
 <body>
 
@@ -34,11 +43,12 @@
         Dogs
       </a>
       <div class="dropdown-menu menuItems">
+	<a class="dropdown-item" id ="allDogs" href="dogs.html">All</a>
         <a class="dropdown-item" id="pits" href="dogs.html">Pits</a>
-        <a class="dropdown-item" href="dogs.html">Labs</a>
-        <a class="dropdown-item" href="dogs.html">German Shepard</a>
-        <a class="dropdown-item" href="dogs.html">Large Dogs</a>
-        <a class="dropdown-item" href="dogs.html">Small Dogs</a>
+        <a class="dropdown-item" id="labs" href="dogs.html">Labs</a>
+        <a class="dropdown-item" id="germanShepard" href="dogs.html">German Shepard</a>
+        <a class="dropdown-item" id="largeD" href="dogs.html">Large Dogs</a>
+        <a class="dropdown-item" id="smallD" href="dogs.html">Small Dogs</a>
       </div>
     </li>
     <!-- Cats Dropdown -->
@@ -47,7 +57,8 @@
         Cats
       </a>
       <div class="dropdown-menu menuItems">
-        <a class="dropdown-item" href="cats.html" id="cats_long">Medium-Haired</a>
+	<a class="dropdown-item" href="cats.html" id="allCats">All</a>
+        <a class="dropdown-item" href="cats.html" id="cats_long">Long-Haired</a>
         <a class="dropdown-item" href="cats.html" id="cats_short">Short-Haired</a>
       </div>
     </li>
@@ -57,6 +68,7 @@
         Other
       </a>
       <div class="dropdown-menu">
+	<a class="dropdown-item" herf="#" id="allOther">All</a>
         <a class="dropdown-item" href="#" id="Furry">Small & Furry</a>
         <a class="dropdown-item" href="#" id="birds">Birds</a>
         <a class="dropdown-item" href="#" id="horses">Horses & Barnyard</a>
@@ -74,221 +86,518 @@
         <h1 style="font-family: 'Permanent Marker', cursive;">Knoxville's</h1><h1>Elders</h1>
 </div>
 
-   <!-- Card deck -->
-   <div class="card-deck" style="padding: 20px;">
+ <!-- Card deck -->
+ <div class="card-deck row" style="padding: 20px;"> 
 
-    <!-- Card 1-->
-    <div class="card mb-4">
-  
-      <!--Card image-->
-      <div class="view overlay">
-        <img class="card-img-top petImage" src="img/dog1.png" alt="Card image cap-dog">
-        <a href="#!">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-  
-      <!--Card content-->
-      <div class="card-body">
-  
-        <!--Title-->
-        <h4 class="card-title">Bella</h4>
-        <!--Text-->
-        <p class="card-text" style="font-size:large">
-          <b>Age: </b>6Y<br>
-          <b>Sex: </b>Female<br>
-          <b>Weight: </b>40 lb<br>
-          <b>Description: </b>Shy, will need time to warm up</p>
-        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-        <center>
-          <button type="button" class="btn btn-info btn-light-blue btn-md text-lg-center" style="font-size:16px" a href="https://www.shelterluv.com/publish_animal/YWAC-A-166586?embedded=1&columns=2&iframeId=shelterluv_wrap_1527306269046&species=Dog&intakeType=&status=#https://www.young-williams.org/adopt-a-pet/adopt-a-dog/">Adopt Me</button>
-          <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
-        </center>
-      </div>
-  
-    </div>
-    <!-- Card -->
-  
-    <!-- Card 2-->
-    <div class="card mb-4">
-  
-      <!--Card image-->
-      <div class="view overlay">
-        <img class="card-img-top petImage" src="img/dog2.jpg" alt="Card image cap">
-        <a href="#!">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-  
-      <!--Card content-->
-      <div class="card-body">
-  
-        <!--Title-->
-        <h4 class="card-title">Peter</h4>
-        <!--Text-->
-        <p class="card-text" style="font-size: large;">
-            <b>Age: </b>2Y<br>
-            <b>Sex: </b>Male<br>
-            <b>Weight: </b>115 lb<br>
-            <b>Description: </b>Anatolian/Shepherd mix, would do good in a home with kids but with no cats.</p>
-        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-       <center>
-        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.petfinder.com/dog/peter-42667777/tn/knoxville/tennessee-valley-golden-retriever-rescue-tn103/">Adopt Me</button>
-        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
-      </center>
-      </div>
-  
-    </div>
-    <!-- Card -->
-  
-    <!-- Card 3-->
-    <div class="card mb-4">
-  
-      <!--Card image-->
-      <div class="view overlay">
-        <img class="card-img-top petImage" src="img/dog3.png" alt="Card image cap">
-        <a href="#!">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-  
-      <!--Card content-->
-      <div class="card-body">
-  
-        <!--Title-->
-        <h4 class="card-title">Clayton</h4>
-        <!--Text-->
-        <p class="card-text" style="font-size: large;">
-            <b>Age: </b>5Y<br>
-            <b>Sex: </b>Male<br>
-            <b>Weight: </b>54 lb<br>
-            <b>Description: </b>Hound mix, needs a home without cats.</p>
-        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-       <center>
-        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.young-williams.org/adopt-a-pet/adopt-a-dog/#sl_embed&page=shelterluv_wrap_1527306269046%2Fpublish_animal%2FYWAC-A-167311%3Fspecies%3DDog%26intakeType%3D%26status%3D">Adopt Me</button>
-        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
-      </center>
-      </div>
-  
-    </div>
-    <!-- Card -->
-  
-  </div>
-  <!-- Card deck -->
-
-<!-- Card deck 1 -->
-<div class="card-deck" style="padding: 20px;">
-
-  <!-- Card 1-->
-  <div class="card mb-4">
-
-    <!--Card image-->
-    <div class="view overlay">
-      <img class="card-img-top petImage" src="img/cat1.png" alt="Card image cap-dog">
-      <a href="#!">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-
-    <!--Card content-->
-    <div class="card-body">
-
-      <!--Title-->
-      <h4 class="card-title">Ramen</h4>
-      <!--Text-->
-      <p class="card-text" style="font-size:large">
-        <b>Age: </b>5M<br>
-        <b>Sex: </b>Male<br>
-        <b>Weight: </b>3 lb<br>
-        <b>Description: </b>Shy, will need time to warm up</p>
-      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <center>
-        <button type="button" class="btn btn-info btn-light-blue btn-md text-lg-center" style="font-size:16px" href="https://www.young-williams.org/adopt-a-pet/adopt-a-cat/#sl_embed&page=shelterluv_wrap_1527306539435%2Fpublish_animal%2FYWAC-A-165809%3Fspecies%3DCat%26intakeType%3D%26status%3D">Adopt Me</button>
-        <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
-      </center>
-    </div>
-
-  </div>
-  <!-- Card -->
-
-      <!-- Card -->
-
-  <!-- Card 2-->
-  <div class="card mb-4">
-
-    <!--Card image-->
-    <div class="view overlay">
-      <img class="card-img-top petImage" src="img/cat3.jpg" alt="Card image cap">
-      <a href="#!">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-
-    <!--Card content-->
-    <div class="card-body">
-
-      <!--Title-->
-      <h4 class="card-title">Jaguar</h4>
-      <!--Text-->
-      <p class="card-text" style="font-size: large;">
-          <b>Age: </b>5M<br>
-          <b>Sex: </b>Female<br>
-          <b>Weight: </b>5 lb<br>
-          <b>Description: </b>Tabby cat, short haired.</p>
-      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-     <center>
-      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.young-williams.org/adopt-a-pet/adopt-a-dog/#sl_embed&page=shelterluv_wrap_1527306269046%2Fpublish_animal%2FYWAC-A-167311%3Fspecies%3DDog%26intakeType%3D%26status%3D">Adopt Me</button>
-      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
-    </center>
-    </div>
-
-  </div>
-  <!-- Card -->
-
-  <!-- Card 3-->
-  <div class="card mb-4">
-
-    <!--Card image-->
-    <div class="view overlay">
-      <img class="card-img-top petImage" src="img/cat2.png" alt="Card image cap">
-      <a href="#!">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-
-    <!--Card content-->
-    <div class="card-body">
-
-      <!--Title-->
-      <h4 class="card-title">Spice</h4>
-      <!--Text-->
-      <p class="card-text" style="font-size: large;">
-          <b>Age: </b>4Y<br>
-          <b>Sex: </b>Female<br>
-          <b>Weight: </b>7 lb<br>
-          <b>Description: </b>Short-haired. Has not been around a lot of people. </p>
-      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-     <center>
-      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="https://www.young-williams.org/adopt-a-pet/adopt-a-cat/#sl_embed&page=shelterluv_wrap_1527306539435%2Fpublish_animal%2FYWAC-A-166319%3Fspecies%3DCat%26intakeType%3D%26status%3D">Adopt Me</button>
-      <button type="button" class="btn btn-light-blue btn-md" style="font-size:16px" a href="#">View Map</button>
-    </center>
-    </div>
-
-  </div>
-
+  <!-- Card 1-->      
+  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-11 col-sm-offset 1">
+      <div class="card-container manual-flip">
+      <div class="card mb-4">
+          <div class="front">
+              <div class="cover">
+                  <img class="cover" src="img/hs.jpg"/>
+              </div>
+              <div class="pet">
+                  <img class="img-circle" src="img/dog2.jpg"/>
+              </div>
+              <div class="content">
+                  <div class="main" id="cat1">
+                      <h3 class="name">Peter</h3>
+                      <p class="age">Age: 2Y</p> 
+                  </div>
+                </div>
+                  <div class="footer">
+                      <button class="btn btn-simple" onclick="rotateCard(this)">
+                          Learn More <i class="far fa-share-square"></i> 
+                       </button>
+                  </div>
+          </div> <!-- end front panel -->
+          <div class="back">
+              <div class="cover">
+                  <img class="cover" src="img/hs.jpg"/>
+              </div>
+              <div class="pet2">
+                  <img class="img-circle" src="img/dog2.jpg"/>
+              </div>
+              <div class="content">
+                  <div class="main">
+                      <div class="stats-container">
+                          <div class="stats">
+                              <h4>Male</h4>
+                          </div>
+                          <div class="stats">
+                              <h4>115 LB </h4>
+                          </div>
+                        </div>
+                        <div class ="description">"Anatolian/Shepherd mix, would do good in a home with kids but with no cats."</div>
+                        <div class ="text-center">
+                          <button type="button" id="cat1" class="btn btn-white btn-md text-lg-center" style="font-size:18px; padding: .7rem 1rem;"
+                              onclick="openInNewTab('https://www.petfinder.com/dog/peter-42667777/tn/knoxville/tennessee-valley-golden-retriever-rescue-tn103/');">Adopt Me</button>
+                          <button type="button" id="ywac" class="btn btn-white btn-md" style="font-size:18px; padding: .7rem 1rem;" a href="#">View Map</button>
+                        </div>
+                        
+                  </div>
+              </div>
+              <div class="footer" style="border:none;">
+                  <button class="btn btn-simple btn-back" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                      <i class="fas fa-undo-alt"></i>
+                  </button>
+              </div>
+          </div> <!-- end back panel -->
+      </div> <!-- end card -->
+  </div> <!-- end card-container -->
 </div>
-<!-- Card deck -->
+
+  <!-- Card 2-->      
+  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-11 col-sm-offset 1">
+    <div class="card-container manual-flip">
+    <div class="card mb-4">
+        <div class="front">
+            <div class="cover">
+                <img class="cover" src="img/YWACLogo.jpg"/>
+            </div>
+            <div class="pet">
+                <img class="img-circle" src="img/cat1.png"/>
+            </div>
+            <div class="content">
+                <div class="main" id="cat1">
+                    <h3 class="name">Ramen</h3>
+                    <p class="age">Age: 7M</p> 
+                </div>
+              </div>
+                <div class="footer">
+                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                        Learn More <i class="far fa-share-square"></i> 
+                     </button>
+                </div>
+        </div> <!-- end front panel -->
+        <div class="back">
+            <div class="cover">
+                <img class="cover" src="img/YWACLogo.jpg"/>
+            </div>
+            <div class="pet2">
+                <img class="img-circle" src="img/cat1.png"/>
+            </div>
+            <div class="content">
+                <div class="main">
+                    <div class="stats-container">
+                        <div class="stats">
+                            <h4>Male</h4>
+                        </div>
+                        <div class="stats">
+                            <h4>3.2 LB </h4>
+                        </div>
+                      </div>
+                      <div class ="description">"I'm a little shy and will need some time to warm up, but I would still love a home."</div>
+                      <div class ="text-center">
+                        <button type="button" id="cat1" class="btn btn-white btn-md text-lg-center" style="font-size:18px; padding: .7rem 1rem;"
+                            onclick="openInNewTab('https://www.young-williams.org/adopt-a-pet/adopt-a-cat/#sl_embed&page=shelterluv_wrap_1527306539435%2Fpublish_animal%2FYWAC-A-165809%3Fspecies%3DCat%26intakeType%3D%26status%3D');">Adopt Me</button>
+                        <button type="button" id="ywac" class="btn btn-white btn-md" style="font-size:18px; padding: .7rem 1rem;" a href="#">View Map</button>
+                      </div>
+                      
+                </div>
+            </div>
+            <div class="footer" style="border:none;">
+                <button class="btn btn-simple btn-back" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                    <i class="fas fa-undo-alt"></i>
+                </button>
+            </div>
+        </div> <!-- end back panel -->
+    </div> <!-- end card -->
+</div> <!-- end card-container -->
+</div>
+
+ <!-- Card 3-->  
+ <div class="col-xl-3 col-lg-4 col-md-6 col-sm-11 col-sm-offset 1">
+  <div class="card-container manual-flip">
+  <div class="card mb-4">
+      <div class="front">
+          <div class="cover">
+              <img class="cover" src="img/YWACLogo.jpg"/>
+          </div>
+          <div class="pet">
+              <img class="img-circle" src="img/dog1.png"/>
+          </div>
+          <div class="content">
+              <div class="main" id="cat1">
+                  <h3 class="name">Bella</h3>
+                  <p class="age">Age: 6Y</p> 
+              </div>
+            </div>
+              <div class="footer">
+                  <button class="btn btn-simple" onclick="rotateCard(this)">
+                      Learn More <i class="far fa-share-square"></i> 
+                   </button>
+              </div>
+      </div> <!-- end front panel -->
+      <div class="back">
+          <div class="cover">
+              <img class="cover" src="img/YWACLogo.jpg"/>
+          </div>
+          <div class="pet2">
+              <img class="img-circle" src="img/dog1.png"/>
+          </div>
+          <div class="content">
+              <div class="main">
+                  <div class="stats-container">
+                      <div class="stats">
+                          <h4>Female</h4>
+                      </div>
+                      <div class="stats">
+                          <h4>40 LB </h4>
+                      </div>
+                    </div>
+                    <div class ="description">"I'm a shy gal who needs someone patient enough to wait for me to warm up. 
+Meet & greet required with kids."</div>
+                    <div class ="text-center">
+                      <button type="button" id="cat2" class="btn btn-white btn-md text-lg-center" style="font-size:18px; padding: .7rem 1rem;"
+                          onclick="openInNewTab('https://www.shelterluv.com/publish_animal/YWAC-A-166586?embedded=1&columns=2&iframeId=shelterluv_wrap_1527306269046&species=Dog&intakeType=&status=#https://www.young-williams.org/adopt-a-pet/adopt-a-dog/');">Adopt Me</button>
+                      <button type="button" id="ywac" class="btn btn-white btn-md" style="font-size:18px; padding: .7rem 1rem;" a href="#">View Map</button>
+                    </div>
+                    
+              </div>
+          </div>
+          <div class="footer" style="border:none;">
+              <button class="btn btn-simple btn-back" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                  <i class="fas fa-undo-alt"></i>
+              </button>
+          </div>
+      </div> <!-- end back panel -->
+  </div> <!-- end card -->
+</div> <!-- end card-container -->
+</div> <!-- end card 3-->
+
+<!-- Card 4-->  
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-11 col-sm-offset 1">
+    <div class="card-container manual-flip">
+    <div class="card mb-4">
+        <div class="front">
+            <div class="cover">
+                <img class="cover" src="img/YWACLogo.jpg"/>
+            </div>
+            <div class="pet">
+                <img class="img-circle" src="img/cat3.jpg"/>
+            </div>
+            <div class="content">
+                <div class="main" id="cat1">
+                    <h3 class="name">Jaguar</h3>
+                    <p class="age">Age: 5M</p> 
+                </div>
+              </div>
+                <div class="footer">
+                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                        Learn More <i class="far fa-share-square"></i> 
+                     </button>
+                </div>
+        </div> <!-- end front panel -->
+        <div class="back">
+            <div class="cover">
+                <img class="cover" src="img/YWACLogo.jpg"/>
+            </div>
+            <div class="pet2">
+                <img class="img-circle" src="img/cat3.jpg"/>
+            </div>
+            <div class="content">
+                <div class="main">
+                    <div class="stats-container">
+                        <div class="stats">
+                            <h4>Female</h4>
+                        </div>
+                        <div class="stats">
+                            <h4>5 LB </h4>
+                        </div>
+                      </div>
+                      <div class ="description">"I'm a tabby cat with short hair."</div>
+                      <div class ="text-center">
+                        <button type="button" id="cat2" class="btn btn-white btn-md text-lg-center" style="font-size:18px; padding: .7rem 1rem;"
+                            onclick="openInNewTab('https://www.young-williams.org/adopt-a-pet/adopt-a-dog/#sl_embed&page=shelterluv_wrap_1527306269046%2Fpublish_animal%2FYWAC-A-167311%3Fspecies%3DDog%26intakeType%3D%26status%3D');">Adopt Me</button>
+                        <button type="button" id="ywac" class="btn btn-white btn-md" style="font-size:18px; padding: .7rem 1rem;" a href="#">View Map</button>
+                      </div>
+                      
+                </div>
+            </div>
+            <div class="footer" style="border:none;">
+                <button class="btn btn-simple btn-back" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                    <i class="fas fa-undo-alt"></i>
+                </button>
+            </div>
+        </div> <!-- end back panel -->
+    </div> <!-- end card -->
+</div> <!-- end card-container -->
+</div> <!-- end card 4-->
+
+  
+<!-- Card 5-->  
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-11 col-sm-offset 1">
+    <div class="card-container manual-flip">
+    <div class="card mb-4">
+        <div class="front">
+            <div class="cover">
+                <img class="cover" src="img/YWACLogo.jpg"/>
+            </div>
+            <div class="pet">
+                <img class="img-circle" src="img/dog1.png"/>
+            </div>
+            <div class="content">
+                <div class="main" id="cat1">
+                    <h3 class="name">Bella</h3>
+                    <p class="age">Age: 6Y</p> 
+                </div>
+              </div>
+                <div class="footer">
+                    <button class="btn btn-simple" onclick="rotateCard(this)">
+                        Learn More <i class="far fa-share-square"></i> 
+                     </button>
+                </div>
+        </div> <!-- end front panel -->
+        <div class="back">
+            <div class="cover">
+                <img class="cover" src="img/YWACLogo.jpg"/>
+            </div>
+            <div class="pet2">
+                <img class="img-circle" src="img/dog1.png"/>
+            </div>
+            <div class="content">
+                <div class="main">
+                    <div class="stats-container">
+                        <div class="stats">
+                            <h4>Female</h4>
+                        </div>
+                        <div class="stats">
+                            <h4>40 LB </h4>
+                        </div>
+                      </div>
+                      <div class ="description">"I'm a shy gal who needs someone patient enough to wait for me to warm up. 
+Meet & greet required with kids."</div>
+                      <div class ="text-center">
+                        <button type="button" id="cat2" class="btn btn-white btn-md text-lg-center" style="font-size:18px; padding: .7rem 1rem;"
+                            onclick="openInNewTab('https://www.shelterluv.com/publish_animal/YWAC-A-166586?embedded=1&columns=2&iframeId=shelterluv_wrap_1527306269046&species=Dog&intakeType=&status=#https://www.young-williams.org/adopt-a-pet/adopt-a-dog/');">Adopt Me</button>
+                        <button type="button" id="ywac" class="btn btn-white btn-md" style="font-size:18px; padding: .7rem 1rem;" a href="#">View Map</button>
+                      </div>
+                      
+                </div>
+            </div>
+            <div class="footer" style="border:none;">
+                <button class="btn btn-simple btn-back" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                    <i class="fas fa-undo-alt"></i>
+                </button>
+            </div>
+        </div> <!-- end back panel -->
+    </div> <!-- end card -->
+</div> <!-- end card-container -->
+</div> <!-- end card 5-->
+
+<!-- Card 6-->  
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-11 col-sm-offset 1">
+  <div class="card-container manual-flip">
+  <div class="card mb-4">
+      <div class="front">
+          <div class="cover">
+              <img class="cover" src="img/YWACLogo.jpg"/>
+          </div>
+          <div class="pet">
+              <img class="img-circle" src="img/cat3.jpg"/>
+          </div>
+          <div class="content">
+              <div class="main" id="cat1">
+                  <h3 class="name">Jaguar</h3>
+                  <p class="age">Age: 5M</p> 
+              </div>
+            </div>
+              <div class="footer">
+                  <button class="btn btn-simple" onclick="rotateCard(this)">
+                      Learn More <i class="far fa-share-square"></i> 
+                   </button>
+              </div>
+      </div> <!-- end front panel -->
+      <div class="back">
+          <div class="cover">
+              <img class="cover" src="img/YWACLogo.jpg"/>
+          </div>
+          <div class="pet2">
+              <img class="img-circle" src="img/cat3.jpg"/>
+          </div>
+          <div class="content">
+              <div class="main">
+                  <div class="stats-container">
+                      <div class="stats">
+                          <h4>Female</h4>
+                      </div>
+                      <div class="stats">
+                          <h4>5 LB </h4>
+                      </div>
+                    </div>
+                    <div class ="description">"I'm a tabby cat with short hair."</div>
+                    <div class ="text-center">
+                      <button type="button" id="cat2" class="btn btn-white btn-md text-lg-center" style="font-size:18px; padding: .7rem 1rem;"
+                          onclick="openInNewTab('https://www.young-williams.org/adopt-a-pet/adopt-a-dog/#sl_embed&page=shelterluv_wrap_1527306269046%2Fpublish_animal%2FYWAC-A-167311%3Fspecies%3DDog%26intakeType%3D%26status%3D');">Adopt Me</button>
+                      <button type="button" id="ywac" class="btn btn-white btn-md" style="font-size:18px; padding: .7rem 1rem;" a href="#">View Map</button>
+                    </div>
+                    
+              </div>
+          </div>
+          <div class="footer" style="border:none;">
+              <button class="btn btn-simple btn-back" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                  <i class="fas fa-undo-alt"></i>
+              </button>
+          </div>
+      </div> <!-- end back panel -->
+  </div> <!-- end card -->
+</div> <!-- end card-container -->
+</div> <!-- end card 6-->
+
+<!-- Card 7-->      
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-11 col-sm-offset 1">
+  <div class="card-container manual-flip">
+  <div class="card mb-4">
+      <div class="front">
+          <div class="cover">
+              <img class="cover" src="img/hs.jpg"/>
+          </div>
+          <div class="pet">
+              <img class="img-circle" src="img/dog2.jpg"/>
+          </div>
+          <div class="content">
+              <div class="main" id="cat1">
+                  <h3 class="name">Peter</h3>
+                  <p class="age">Age: 2Y</p> 
+              </div>
+            </div>
+              <div class="footer">
+                  <button class="btn btn-simple" onclick="rotateCard(this)">
+                      Learn More <i class="far fa-share-square"></i> 
+                   </button>
+              </div>
+      </div> <!-- end front panel -->
+      <div class="back">
+          <div class="cover">
+              <img class="cover" src="img/hs.jpg"/>
+          </div>
+          <div class="pet2">
+              <img class="img-circle" src="img/dog2.jpg"/>
+          </div>
+          <div class="content">
+              <div class="main">
+                  <div class="stats-container">
+                      <div class="stats">
+                          <h4>Male</h4>
+                      </div>
+                      <div class="stats">
+                          <h4>115 LB </h4>
+                      </div>
+                    </div>
+                    <div class ="description">"Anatolian/Shepherd mix, would do good in a home with kids but with no cats."</div>
+                    <div class ="text-center">
+                      <button type="button" id="cat1" class="btn btn-white btn-md text-lg-center" style="font-size:18px; padding: .7rem 1rem;"
+                          onclick="openInNewTab('https://www.petfinder.com/dog/peter-42667777/tn/knoxville/tennessee-valley-golden-retriever-rescue-tn103/');">Adopt Me</button>
+                      <button type="button" id="ywac" class="btn btn-white btn-md" style="font-size:18px; padding: .7rem 1rem;" a href="#">View Map</button>
+                    </div>
+                    
+              </div>
+          </div>
+          <div class="footer" style="border:none;">
+              <button class="btn btn-simple btn-back" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                  <i class="fas fa-undo-alt"></i>
+              </button>
+          </div>
+      </div> <!-- end back panel -->
+  </div> <!-- end card -->
+</div> <!-- end card-container -->
+</div>
 
 
+<!-- Card 8-->      
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-11 col-sm-offset 1">
+  <div class="card-container manual-flip">
+  <div class="card mb-4">
+      <div class="front">
+          <div class="cover">
+              <img class="cover" src="img/YWACLogo.jpg"/>
+          </div>
+          <div class="pet">
+              <img class="img-circle" src="img/cat1.png"/>
+          </div>
+          <div class="content">
+              <div class="main" id="cat1">
+                  <h3 class="name">Ramen</h3>
+                  <p class="age">Age: 7M</p> 
+              </div>
+            </div>
+              <div class="footer">
+                  <button class="btn btn-simple" onclick="rotateCard(this)">
+                      Learn More <i class="far fa-share-square"></i> 
+                   </button>
+              </div>
+      </div> <!-- end front panel -->
+      <div class="back">
+          <div class="cover">
+              <img class="cover" src="img/YWACLogo.jpg"/>
+          </div>
+          <div class="pet2">
+              <img class="img-circle" src="img/cat1.png"/>
+          </div>
+          <div class="content">
+              <div class="main">
+                  <div class="stats-container">
+                      <div class="stats">
+                          <h4>Male</h4>
+                      </div>
+                      <div class="stats">
+                          <h4>3.2 LB </h4>
+                      </div>
+                    </div>
+                    <div class ="description">"I'm a little shy and will need some time to warm up, but I would still love a home."</div>
+                    <div class ="text-center">
+                      <button type="button" id="cat1" class="btn btn-white btn-md text-lg-center" style="font-size:18px; padding: .7rem 1rem;"
+                          onclick="openInNewTab('https://www.young-williams.org/adopt-a-pet/adopt-a-cat/#sl_embed&page=shelterluv_wrap_1527306539435%2Fpublish_animal%2FYWAC-A-165809%3Fspecies%3DCat%26intakeType%3D%26status%3D');">Adopt Me</button>
+                      <button type="button" id="ywac" class="btn btn-white btn-md" style="font-size:18px; padding: .7rem 1rem;" a href="#">View Map</button>
+                    </div>
+                    
+              </div>
+          </div>
+          <div class="footer" style="border:none;">
+              <button class="btn btn-simple btn-back" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                  <i class="fas fa-undo-alt"></i>
+              </button>
+          </div>
+      </div> <!-- end back panel -->
+  </div> <!-- end card -->
+</div> <!-- end card-container -->
+</div>
+  
+  </div> 
 
-  <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript">
+    $().ready(function(){
+        $('[rel="tooltip"]').tooltip();
+
+        $('a.scroll-down').click(function(e){
+            e.preventDefault();
+            scroll_target = $(this).data('href');
+             $('html, body').animate({
+                 scrollTop: $(scroll_target).offset().top - 60
+             }, 1000);
+        });
+
+    });
+
+    function rotateCard(btn){
+        var $card = $(btn).closest('.card-container');
+        console.log($card);
+        if($card.hasClass('hover')){
+            $card.removeClass('hover');
+        } else {
+            $card.addClass('hover');
+        }
+    }
+    </script>
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 </html>
