@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker&display=swap');
+
+body{
+    background: rgb(158,255,213);
+    background: linear-gradient(180deg, rgba(158,255,213,.8) 0%, rgba(217,255,204,.8) 80%, rgba(255,255,204,.8) 92%);
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.menuStyle
+{
+  font-size: 60px;
+  width: 100%;
+  overflow: none;
+}
+
+.welcome{
+    font-size: 3VW;
+    width: 100%;
+    margin: 80px;
+    padding: 20px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.menuButtons {
+    padding: 5px 20px;
+}
+
+.navbar .dropdown-menu a{
+    font-size: 1.5rem;
+  }
